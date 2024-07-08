@@ -5,11 +5,11 @@ import { toast } from "react-toastify";
 
 const AdminUsers = () => {
   const [users, setUsers] = useState([]);
-  const { authorizationToken } = useAuth();
+  const { authorizationToken,API } = useAuth();
 
   const getAllUsersData = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/admin/users", {
+      const response = await fetch(`${API}/api/admin/users`, {
         method: "GET",
         headers: {
           Authorization: authorizationToken,
@@ -32,7 +32,7 @@ const AdminUsers = () => {
 
   const deleteUser= async(id)=>{
     try {
-        const response = await fetch(`http://localhost:8000/api/admin/users/delete/${id}`, {
+        const response = await fetch(`${API}/api/admin/users/delete/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: authorizationToken,

@@ -14,7 +14,7 @@ const[services,setServices] = useState([])
 // console.log(user)
   
 
-
+const API = import.meta.env.VITE_URI_API;
 
 const storeTokenInLS = (serverToken)=>{
       setToken( serverToken);
@@ -41,7 +41,7 @@ const userAuthentication = async()=>{
  
    try {
     setIsLoading(true)
-    const response = await fetch("http://localhost:8000/api/user/user",{
+    const response = await fetch(`${API}/api/user/user`,{
         method:"GET",
         headers:{
             Authorization:  authorizationToken,
@@ -64,7 +64,7 @@ const userAuthentication = async()=>{
 const getServices=async()=>{
 
  try {
-        const response = await fetch(`http://localhost:8000/api/data/service`,{
+        const response = await fetch(`${API}/api/data/service`,{
             method:"GET",
         });
         if(response.ok){
@@ -89,7 +89,7 @@ useEffect(()=>{
 },[])
 
 return (
-<AuthContext.Provider value= {{storeTokenInLS  ,LogoutUser, isLogged,user,services, authorizationToken,isLoading}}>
+<AuthContext.Provider value= {{storeTokenInLS,API  ,LogoutUser, isLogged,user,services, authorizationToken,isLoading}}>
      {children}
 </AuthContext.Provider>
 )

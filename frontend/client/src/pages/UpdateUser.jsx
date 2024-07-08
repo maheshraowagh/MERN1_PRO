@@ -13,13 +13,13 @@ const UpdateUser = () => {
   const params = useParams();
 //   console.log(params.userId)
  
-  const { authorizationToken } = useAuth();
+  const { authorizationToken,API } = useAuth();
 
   useEffect(() => {
     const getSingleUserData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8000/api/admin/users/${params.userId}`,
+          `${API}/api/admin/users/${params.userId}`,
           {
             method: "GET",
             headers: {

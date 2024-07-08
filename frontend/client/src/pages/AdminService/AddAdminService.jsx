@@ -12,7 +12,7 @@ const AddAdminService = () => {
        price:"", 
        provider:""
   });
-  const { authorizationToken } = useAuth();
+  const { authorizationToken,API } = useAuth();
 
   const handleInput = (e) => {
     let name = e.target.name;
@@ -24,7 +24,7 @@ const AddAdminService = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch("http://localhost:8000/api/admin/createService", {
+      const response = await fetch(`${API}/api/admin/createService`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

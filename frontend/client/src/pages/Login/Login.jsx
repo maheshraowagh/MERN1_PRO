@@ -20,13 +20,13 @@ const Login= ()=>{
       setUser({...user,[name]:value})
    }
    const Navigate = useNavigate();
-   const {storeTokenInLS} = useAuth()
+   const {storeTokenInLS,API} = useAuth()
     
    const handleSubmit = async (e) => {
       e.preventDefault();
       // console.log(user);
       try {
-        const response = await fetch("http://localhost:8000/api/user/login", {
+        const response = await fetch(`${API}/api/user/login`, {
           method: "POST",
           headers: {
             'Content-Type': 'application/json',

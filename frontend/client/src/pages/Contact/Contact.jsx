@@ -11,7 +11,7 @@ const Contact = () => {
   });
   // console.log(contact)
   const [userData, setUserData] = useState(true)
-  const {user} = useAuth();
+  const {user,API} = useAuth();
 
   
   
@@ -39,7 +39,7 @@ const Contact = () => {
     e.preventDefault();
     console.log(contact)
     try {
-      const response= await fetch("http://localhost:8000/api/form/contact",{
+      const response= await fetch(`${API}/api/form/contact`,{
         method:"POST",
         headers:{
           "Content-Type": "application/json",
