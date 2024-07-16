@@ -14,7 +14,7 @@ const[services,setServices] = useState([])
 // console.log(user)
   
 
-const API = https://mern1-pro-backend-1.onrender.com;
+const API = "https://mern1-pro-backend-1.onrender.com";
 
 const storeTokenInLS = (serverToken)=>{
       setToken( serverToken);
