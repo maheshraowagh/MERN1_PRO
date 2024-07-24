@@ -89,7 +89,7 @@ const Register = () => {
                   <div className="text-2xl md:py-4 ml-5 md:ml-1 ">
                     <label  htmlFor="username">Name :</label>
                     <input
-                      className="  md:ml-11 px-4 mt-2 md:mt-0 md:px-4 py-2 rounded-2xl border-none outline-none md:w-[350px]"
+                      className="  md:ml-11 px-4 mt-2 md:mt-0 md:px-4 py-2 rounded-2xl border-none outline-none w-full md:w-[385px]"
                       type="text"
                       name="name"
                       placeholder=" name"
@@ -102,7 +102,7 @@ const Register = () => {
                   <div className="text-2xl py-4 ml-5 md:ml-1">
                     <label htmlFor="email">email</label> :
                     <input
-                      className="md:ml-12 md:w-[350px] mt-2 md:mt-0 px-4 py-2 rounded-2xl border-none outline-none"
+                      className="md:ml-12  w-full md:w-[385px] mt-2 md:mt-0 px-4 py-2 rounded-2xl border-none outline-none"
                       type="email"
                       name="email"
                       placeholder=" enter your email"
@@ -115,7 +115,7 @@ const Register = () => {
                   <div className="text-2xl py-4  ml-5 md:ml-1">
                     <label htmlFor="mobile">mobile</label> :
                     <input
-                      className="md:ml-9 md:w-[350px] px-4 mt-2 md:mt-0 py-2 rounded-2xl border-none outline-none"
+                      className="md:ml-9  w-full md:w-[385px] px-4 md:px-6 mt-2 md:mt-0 py-2 rounded-2xl border-none outline-none"
                       type="text"
                       name="mobile"
                       placeholder="mobile number"
@@ -128,9 +128,9 @@ const Register = () => {
 
                   <div className="text-2xl py-4 md:flex mr-4 md:mr-0  ml-5 md:ml-1">
                     <label htmlFor="password">password</label> :
-                    <div className="flex justify-center items-center bg-white rounded-xl md:w-[350px] md:ml-5">
+                    <div className="flex justify-center items-center bg-white rounded-xl  w-full md:w-[385px] px-4 md:px-6 md:ml-4">
                     <input
-                      className="  py-2 rounded-2xl border-none outline-none "
+                      className=" w-full py-2 rounded-2xl border-none outline-none "
                       type=  { visible? "text":"password"}
                       name="password"
                       placeholder=" password"
@@ -139,7 +139,7 @@ const Register = () => {
                       value={user.password}
                       onChange={handleInput}
                     />
-                    <div onClick={()=>setVisible(!visible)} className="cursor-pointer">
+                    <div onClick={()=>setVisible(!visible)} className="cursor-pointer ml-2">
                     { visible?<LuEye />: <LuEyeOff/>}
                  </div>
 

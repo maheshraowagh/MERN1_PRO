@@ -88,23 +88,24 @@ const Login= ()=>{
 
          <div className="text-2xl py-4 ">
 
-             <label htmlFor="email">email</label> :  
-             <input className="md:ml-14  mt-3 md:mt-0 outline-none md:w-[350px] px-4 py-2 rounded-2xl" type="email" name="email" placeholder=" enter your email" required autoComplete="off" value= {user.email} onChange={handleInput}  />
+             <label htmlFor="email">email</label> :
+             
+             <input className="md:ml-14  mt-3 md:mt-0 outline-none w-full md:w-[350px] px-4 py-2 rounded-2xl" type="email" name="email" placeholder=" enter your email" required autoComplete="off" value= {user.email} onChange={handleInput}  />
          </div>
         
 
-        <div className=" text-2xl py-4 md:flex   ">
-             <label className="md:flex   " htmlFor="password">password</label> :  
+        <div className=" text-2xl py-4 md:flex    ">
+             <label className="md:flex    " htmlFor="password">password</label> :  
 
-             <div className="flex px-2 rounded-xl mt-3 md:mt-0 md:ml-5 md:w-[350px] justify-center items-center bg-white  ">
-             <input className="md:ml-2   md:flex-grow border-none text-2xl    outline-none  py-2 " 
+             <div className="flex px-2 rounded-2xl mt-3 md:mt-0  md:ml-5 w-full md:w-[350px] justify-center items-center bg-white  ">
+             <input className="ml-2   md:flex-grow border-none text-2xl rounded-2xl   outline-none  py-2 " 
              type= { visible? "text":"password"}
              name="password"
               placeholder=" password"
                required 
                autoComplete="off" 
                value= {user.password} onChange={handleInput} />
-               <div onClick={()=>setVisible(!visible)} className="cursor-pointer">
+               <div onClick={()=>setVisible(!visible)} className="cursor-pointer text-xl  md:text-2xl pr-3 md:pr-0 ">
                   { visible?<LuEye />: <LuEyeOff/>}
                </div>
                </div>

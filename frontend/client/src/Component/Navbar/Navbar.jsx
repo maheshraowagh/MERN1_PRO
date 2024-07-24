@@ -10,10 +10,10 @@ const Navbar = () => {
   
   return (
     <>
-    <div className="    w-full h-[8vh]  flex justify-between md:px-12   items-center bg-[#242424] text-white ">
+    <div className="    w-full h-[8vh]  flex justify-between md:px-12 px-1   items-center bg-[#242424] text-white ">
 
 
-    <div className=" pl-6 md:pl-1  text-2xl">
+    <div className=" pl-2  md:pl-6  text-2xl">
     <NavLink to="/"> <span className="text-[#F9703F]">MERN</span>TECHNICAL</NavLink>   
     </div>
     
@@ -58,7 +58,7 @@ const Navbar = () => {
 
       </ul>
       <button onClick={(()=>mobileNav==='hidden'?setMobileNav('block'):setMobileNav('hidden'))}
-       className="flex items-center ml-[30vw] md:hidden pr-8  text-4xl ">
+       className="flex items-center  md:hidden pr-8  text-4xl ">
         <GiHamburgerMenu />
       {console.log(mobileNav)}
         </button>
